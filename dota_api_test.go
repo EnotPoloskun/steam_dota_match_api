@@ -2,7 +2,6 @@ package steamdotaapi
 
 import (
   "testing"
-  "fmt"
 )
 
 func TestPlayerSlotIsDire(t *testing.T) {
@@ -20,8 +19,6 @@ func TestPlayerSlotIsDire(t *testing.T) {
 
 func TestPlayerSlotPosition(t *testing.T) {
   var playerSlot PlayerSlot = 9
-
-  fmt.Println(playerSlot.Position())
 
   if playerSlot.Position() != 1 {
     t.Errorf("wrong position %v", playerSlot)
