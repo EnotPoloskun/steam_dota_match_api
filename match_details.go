@@ -14,9 +14,10 @@ type MatchResult struct {
   Season uint `json:"item_0,omitempty"`
   RadiantWin bool `json:"radiant_win"`
   Duration uint
+  PreGameDuration uint `json:"pre_game_duration"`
   MatchStart uint `json:"start_time"`
   MatchId uint64 `json:"match_id"`
-  MatchSequenceNo uint `json:"match_seq_num"`
+  MatchSequenceNumber uint `json:"match_seq_num"`
   TowerStatusRadiant TowerStatus `json:"tower_status_radiant"`
   TowerStatusDire TowerStatus `json:"tower_status_dire"`
   BarracksStatusRadiant BarracksStatus `json:"barracks_status_radiant"`
@@ -32,6 +33,8 @@ type MatchResult struct {
   PicksBans []PickBan `json:"picks_bans,omitempty"`
   RadiantScore uint `json:"radiant_score"`
   DireScore uint `json:"dire_score"`
+  Engine int
+  Flags int
 }
 
 type Player struct {
@@ -44,6 +47,9 @@ type Player struct {
   Item3 uint `json:"item_3"`
   Item4 uint `json:"item_4"`
   Item5 uint `json:"item_5"`
+  Backpack0 uint `json:"backpack_0"`
+  Backpack1 uint `json:"backpack_1"`
+  Backpack2 uint `json:"backpack_2"`
   Kills uint
   Deaths uint
   Assists uint
